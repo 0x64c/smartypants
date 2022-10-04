@@ -6,7 +6,7 @@ Setup:
 * Install required packages: (arch linux example) ```pacman -Sy smartmontools bc expect jq screen openssh core coreutils```
 * Allow root logins for ssh
 * Enable/start sshd
-* Have at least 1920x1080 screen resolution in console on main machine
+* Have at least 1920x1080 screen resolution in console on main machine (GRUB should be smart enough for that)
 * Plug in a lot of drives
 * Run script: ```su -c "screen -c ./screenrc-12way"```
 
