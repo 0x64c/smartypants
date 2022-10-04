@@ -212,6 +212,7 @@ function main {
 				break
 			elif [[ $k = z ]]; then
 				shred_disk
+				break
 			elif [[ $k = e ]]; then
 				echo "cya!"
 				QUIT=1
