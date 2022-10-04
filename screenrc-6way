@@ -1,0 +1,56 @@
+#su -c "screen -c ./screenrc-12way"
+#logs into remote machine with credentials and script path as provided here
+
+vbell off
+bell_msg "^G"
+
+screen -t DISK12 ./smartypants.sh 5 root@shredder2 shredder /home/shredder/new/smartypants.sh
+screen -t DISK1 ./smartypants.sh 0
+screen -t DISK2 ./smartypants.sh 1
+screen -t DISK3 ./smartypants.sh 2
+screen -t DISK4 ./smartypants.sh 3
+screen -t DISK5 ./smartypants.sh 4
+screen -t DISK6 ./smartypants.sh 5
+screen -t DISK7 ./smartypants.sh 0 root@shredder2 shredder /home/shredder/new/smartypants.sh
+screen -t DISK8 ./smartypants.sh 1 root@shredder2 shredder /home/shredder/new/smartypants.sh
+screen -t DISK9 ./smartypants.sh 2 root@shredder2 shredder /home/shredder/new/smartypants.sh
+screen -t DISK10 ./smartypants.sh 3 root@shredder2 shredder /home/shredder/new/smartypants.sh
+screen -t DISK11 ./smartypants.sh 4 root@shredder2 shredder /home/shredder/new/smartypants.sh
+screen -t HELP  nano ./help.txt
+
+#eval "split" "split -v" "split -v" "focus down" "split -v" "split -v" "focus top" "focus left" "focus left" "select 1" "focus next" "select 2" "focus next" "select 3" "focus next" "select 4" "focus next" "select 5" "focus next" "select 6"
+eval "split" "split" "split -v" "split -v" "split -v" "focus down" "split -v" "split -v" "split -v" "focus down" "split -v" "split -v" "split -v"
+eval "focus left" "focus left" "focus left" "focus top"
+eval "select 1" "focus next" "select 2" "focus next" "select 3" "focus next" "select 4" "focus next" "select 5" "focus next" "select 6" "focus next" "select 7" "focus next" "select 8" "focus next" "select 9" "focus next" "select 10" "focus next" "select 11" "focus next" "select 0" "focus next"
+
+unbindall
+
+bindkey "^[[[A" eval "focus top" "focus left" "focus left" "focus left" "select 1" "focus next" "select 2" "focus next" "select 3" "focus next" "select 4" "focus next" "select 5" "focus next" "select 6" "focus next" "select 7" "focus next" "select 8" "focus next" "select 9" "focus next" "select 10" "focus next" "select 11" "focus next" "select 0"
+bindkey "^[[[C" eval "focus next"
+bindkey "^[[[D" eval "select 12"
+bindkey "^[[[E" eval "focus top" "focus left" "focus left" "focus left" "stuff t" "focus next" "stuff t" "focus next" "stuff t" "focus next" "stuff t" "focus next" "stuff t" "focus next" "stuff t" "focus next" "stuff t" "focus next" "stuff t" "focus next" "stuff t" "focus next" "stuff t" "focus next" "stuff t" "focus next" "stuff t" "focus next" 
+bindkey "^[[17~" eval "focus top" "focus left" "focus left" "focus left" "stuff l" "focus next" "stuff l" "focus next" "stuff l" "focus next" "stuff l" "focus next" "stuff l" "focus next" "stuff l" "focus next" "stuff l" "focus next" "stuff l" "focus next" "stuff l" "focus next" "stuff l" "focus next" "stuff l" "focus next" "stuff l" "focus next"
+bindkey "^[[18~" eval "focus top" "focus left" "focus left" "focus left" "stuff r" "focus next" "stuff r" "focus next" "stuff r" "focus next" "stuff r" "focus next" "stuff r" "focus next" "stuff r" "focus next" "stuff r" "focus next" "stuff r" "focus next" "stuff r" "focus next" "stuff r" "focus next" "stuff r" "focus next" "stuff r" "focus next"
+bindkey "^[[19~" eval "focus top" "focus left" "focus left" "focus left" "stuff z" "focus next" "stuff z" "focus next" "stuff z" "focus next" "stuff z" "focus next" "stuff z" "focus next" "stuff z" "focus next" "stuff z" "focus next" "stuff z" "focus next" "stuff z" "focus next" "stuff z" "focus next" "stuff z" "focus next" "stuff z" "focus next" 
+bindkey "^[[20~" eval "focus top" "focus left" "focus left" "focus left" "stuff y" "focus next" "stuff y" "focus next" "stuff y" "focus next" "stuff y" "focus next" "stuff y" "focus next" "stuff y" "focus next" "stuff y" "focus next" "stuff y" "focus next" "stuff y" "focus next" "stuff y" "focus next" "stuff y" "focus next" "stuff y" "focus next" 
+bindkey "^[[21~" eval "focus top" "focus left" "focus left" "focus left" "stuff n" "focus next" "stuff n" "focus next" "stuff n" "focus next" "stuff n" "focus next" "stuff n" "focus next" "stuff n" "focus next" "stuff n" "focus next" "stuff n" "focus next" "stuff n" "focus next" "stuff n" "focus next" "stuff n" "focus next" "stuff n" "focus next" 
+
+bindkey "^[[23~" eval "remove"
+bindkey "^[[24~" eval "quit"
+bindkey "a" eval "focus left"
+bindkey "d" eval "focus right"
+bindkey "w" eval "focus up"
+bindkey "s" eval "focus down"
+
+bindkey "~" eval "select 0"
+bindkey "!" eval "select 1"
+bindkey "@" eval "select 2"
+bindkey "#" eval "select 3"
+bindkey "$" eval "select 4"
+bindkey "%" eval "select 5"
+bindkey "\^" eval "select 6"
+bindkey "&" eval "select 7"
+bindkey "*" eval "select 8"
+bindkey "(" eval "select 9"
+bindkey ")" eval "select 10"
+bindkey "_" eval "select 11"
