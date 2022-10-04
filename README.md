@@ -13,3 +13,4 @@ Setup:
 Notes:
 * There are many few edge cases due to a lack of standards of units and representation.
 * Hotswapping isn't supported, but it may work for preliminary testing/pruning
+* Read help.txt
