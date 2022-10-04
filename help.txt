@@ -1,0 +1,18 @@
+F1    Show screen 1
+F2    Show screen 2
+F3    Next window
+F4    Show help
+F5    Short test all
+F6    Long test all
+F7    Refresh all
+F8    Wipe all
+F9    Yes to all
+F10   No to all
+F12   Quit
+wasd  Navigate windows
+t     Short test
+l     Long test
+r     Refresh data
+i     Show data
+z     Shred disk
+e     Exit window
