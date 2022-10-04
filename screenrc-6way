@@ -18,7 +18,6 @@ screen -t DISK10 ./smartypants.sh 3 root@shredder2 shredder /home/shredder/new/s
 screen -t DISK11 ./smartypants.sh 4 root@shredder2 shredder /home/shredder/new/smartypants.sh
 screen -t HELP  nano ./help.txt
 
-#eval "split" "split -v" "split -v" "focus down" "split -v" "split -v" "focus top" "focus left" "focus left" "select 1" "focus next" "select 2" "focus next" "select 3" "focus next" "select 4" "focus next" "select 5" "focus next" "select 6"
 eval "split" "split" "split -v" "split -v" "split -v" "focus down" "split -v" "split -v" "split -v" "focus down" "split -v" "split -v" "split -v"
 eval "focus left" "focus left" "focus left" "focus top"
 eval "select 1" "focus next" "select 2" "focus next" "select 3" "focus next" "select 4" "focus next" "select 5" "focus next" "select 6" "focus next" "select 7" "focus next" "select 8" "focus next" "select 9" "focus next" "select 10" "focus next" "select 11" "focus next" "select 0" "focus next"
